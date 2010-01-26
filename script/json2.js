@@ -1,12 +1,20 @@
 /*
     http://www.JSON.org/json2.js
-    2009-08-17
+    2009-09-29
 
     Public Domain.
 
     NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
 
     See http://www.JSON.org/js.html
+
+
+    This code should be minified before deployment.
+    See http://javascript.crockford.com/jsmin.html
+
+    USE YOUR OWN COPY. IT IS EXTREMELY UNWISE TO LOAD CODE FROM SERVERS YOU DO
+    NOT CONTROL.
+
 
     This file creates a global JSON object containing two methods: stringify
     and parse.
@@ -136,15 +144,9 @@
 
     This is a reference implementation. You are free to copy, modify, or
     redistribute.
-
-    This code should be minified before deployment.
-    See http://javascript.crockford.com/jsmin.html
-
-    USE YOUR OWN COPY. IT IS EXTREMELY UNWISE TO LOAD CODE FROM SERVERS YOU DO
-    NOT CONTROL.
 */
 
-/*jslint evil: true */
+/*jslint evil: true, strict: false */
 
 /*members "", "\b", "\t", "\n", "\f", "\r", "\"", JSON, "\\", apply,
     call, charCodeAt, getUTCDate, getUTCFullYear, getUTCHours,
@@ -153,7 +155,6 @@
     test, toJSON, toString, valueOf
 */
 
-"use strict";
 
 // Create a JSON object only if one does not already exist. We create the
 // methods in a closure to avoid creating global variables.
